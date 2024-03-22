@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "*.embeddedhtml": "html",
+    "ostream": "cpp"
+  },
+  "cmake.sourceDirectory": "/Users/kenta/Dev/Personal/Notes/A_Tour_of_Cpp/1_the_basics"
+}

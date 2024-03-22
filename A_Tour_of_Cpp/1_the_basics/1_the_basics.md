@@ -1,5 +1,21 @@
 # Chapter 1: The Basics
-
+- __CMake__
+    - An open-source, cross-platform tool that uses compiler and platform independent config files to generate native build tool files specific to your complier and platform.
+    - CMake tools need two things: __kit__ and __variant__.
+    - A kit represents a toolchain (the compiler, linker, and other tools used to build your project)
+    - A variant contains instructions for how to build your project. Defaults are
+        - _Debug_ 
+            - No optimizations + debug info
+        - _Release_
+            - Optimizations + no debug info
+        - _MinRelSize_
+            - Optimize for size + no debug info
+        - _RelWithDebInfo_
+            - Optimize for speed + debug info
+- __Compiler__
+    - Clang(++) for MAC
+    - GCC for Linux
+    - MSVC/MINGW for Windows
 - __Declaration__ is a statement that introduces an entity into the program and specifies its type
     - _type_ defines a set of possible values and a set of operations for an object
     - _object_ is some memory that holds a value of a type
