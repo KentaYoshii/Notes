@@ -1,17 +1,43 @@
 # Chapter 1: The Basics
-- __CMake__
-    - An open-source, cross-platform tool that uses compiler and platform independent config files to generate native build tool files specific to your complier and platform.
-    - CMake tools need two things: __kit__ and __variant__.
-    - A kit represents a toolchain (the compiler, linker, and other tools used to build your project)
-    - A variant contains instructions for how to build your project. Defaults are
-        - _Debug_ 
-            - No optimizations + debug info
-        - _Release_
-            - Optimizations + no debug info
-        - _MinRelSize_
-            - Optimize for size + no debug info
-        - _RelWithDebInfo_
-            - Optimize for speed + debug info
+## CMake
+An open-source, cross-platform tool that uses compiler and platform independent config files to generate native build tool files specific to your complier and platform.
+
+- Buildsystem
+    - Describes how to build a project's executables and libraries from its src code using _build tool_ to automate the process. (Makefile, project settings in IDE, etc.)
+    - CMake allows you to specify its buildsystem abstractly using files written in the CMake language.
+        - From these, CMake generates a preferred buildsystem locally
+    - To generate a buildsystem, the following must be selected
+        - Source Tree
+            - The top-level dir containing source files provided by the project, with top-level file named `CMakeLists.txt`
+        - Build Tree
+            - The top-level dir in which buildsystem files and build output are to be stored.
+            - Best to use out-of-source build tree
+        - Generator
+            - Chooese the kind of buildsystem to generate
+### Set the Generator
+```shell
+cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=<Debug|Release|...>
+```
+### Generate a Buildsystem
+```shell
+cmake -S <path-to-src-tree> -B <path-to-build-tree>
+```
+### Build a Project
+```shell
+cmake --build <dir>
+```
+## CMake Tools in VSCode 
+- It needs two things: __kit__ and __variant__.
+- A kit represents a toolchain (the compiler, linker, and other tools used to build your project)
+- A variant contains instructions for how to build your project. Defaults are
+    - _Debug_ 
+        - No optimizations + debug info
+    - _Release_
+        - Optimizations + no debug info
+    - _MinRelSize_
+        - Optimize for size + no debug info
+    - _RelWithDebInfo_
+        - Optimize for speed + debug info
 - __Compiler__
     - Clang(++) for MAC
     - GCC for Linux
