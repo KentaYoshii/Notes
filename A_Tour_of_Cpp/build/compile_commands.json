@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/Users/kenta/Dev/Personal/Notes/A_Tour_of_Cpp/build/src",
-  "command": "/usr/bin/clang++   -g -std=gnu++20 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -o CMakeFiles/1_the_basics.dir/main.cpp.o -c /Users/kenta/Dev/Personal/Notes/A_Tour_of_Cpp/1_the_basics/src/main.cpp",
-  "file": "/Users/kenta/Dev/Personal/Notes/A_Tour_of_Cpp/1_the_basics/src/main.cpp",
-  "output": "src/CMakeFiles/1_the_basics.dir/main.cpp.o"
-}
-]
